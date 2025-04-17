@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Hotels.uz - Find your perfect stay</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="hotel.css">
+  <link rel="stylesheet" href="hotel.css">
+  <link rel="stylesheet" href="book.css">-->
+  
+  <!--<link rel="stylesheet" href="/components/header.css">-->
+</head>
+  <!--<header class="navbar">
+    <div class="container">
+      <h1 class="logo">Hotels.uz</h1>
+      <ul class="menu">
+        <li><a href="index.html">Stays</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="taxi.html">Taxi</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="auth.html">Register</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="header.html">Header</a></li>
+      </ul>
+    </div>
+  </header>-->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Hotels.uz</h1>
+      <ul class="menu">
+        <li><a href="index.html">Stays</a></li>
+        <li><a href="car-rental.html">Car Rental</a></li>
+        <li><a href="taxi.html">Taxi</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="auth.html">Register</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="hotel.html">Hotels</a></li>
+        <li><a href="saved.html">Saved Hotels</a></li>
+        <li><a href="hotel-details.html">hotel-save</a></li>
+        <li><a href="header.html">moblie</a></li>
+        <!--<li><a href="header.html">Main page</a></li>-->
+      </ul>
+      <!-- Til tanlash -->
+      <select id="languageSwitcher" onchange="switchLanguage()">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="uz">O'zbek</option>
+      </select>
+      <main>
+        <h2 data-translate="changeLang"></h2>
+        <input type="text" id="searchInput" placeholder="Search hotels...">
+        <button id="searchBtn" data-translate="search">Search</button>
+      </main>
+    </div>
+  </header>
+  
+  
+
+  <main class="home">
+    
+    <section class="filters">
+      <h3>Explore by Category</h3>
+      <div class="filter-tags">
+        <!-- Filtrlar tugmalari -->
+        <button data-filter="family">Family Friendly</button>
+        <button data-filter="pet">Pet Friendly</button>
+        <button data-filter="luxury">Luxury</button>
+        <button data-filter="budget">Budget Stays</button>
+      </div>
+    </section>
+    
+    <!-- Hotellarni ko‘rsatish uchun konteyner -->
+    <div id="hotels-list"></div>
+    
+    
+    <div id="hotels-list"></div> <!-- Bu yerda filtrlangan hotellarning ro'yxati ko'rsatiladi -->
+    
+
+    <!-- Top Destinations -->
+    <section class="destinations">
+      <h3>Top Destinations in Uzbekistan</h3>
+      <div class="destination-list">
+        <div class="destination">Tashkent</div>
+        <div class="destination">Samarkand</div>
+        <div class="destination">Bukhara</div>
+        <div class="destination">Khiva</div>
+        <div class="destination">Shahrisabz</div>
+      </div>
+    </section>
+
+     Recently Viewed Hotels 
+    <section class="recent-hotels">
+      <h3>Recently Viewed</h3>
+      <div id="recentHotels" class="hotel-cards"></div>
+    </section>  
+  </main>
+
+
+  <main class="home">
+    <!-- Mehmonxonalar ro‘yxati (Recommended Hotels) -->
+    <section class="recommended-hotels">
+      <h3>Recommended Hotels</h3>
+      <div id="hotelsList" class="hotel-cards">
+        <!-- Bu yerda mehmonxonalar kartalari JavaScript orqali qo‘shiladi -->
+      </div>
+    </section>
+  
+    <!-- So'nggi ko'rilgan mehmonxonalar (Recently Viewed) -->
+    <section class="recent-hotels">
+      <h3>Recently Viewed</h3>
+      <div id="recentHotels" class="hotel-cards">
+        <!-- Bu yerda so‘nggi ko‘rilgan mehmonxonalar JavaScript orqali qo‘shiladi -->
+      </div>
+    </section>
+  </main>
+
+  <h2>Popular Hotels</h2>
+  <div class="horizontal-scroll" id="hotel-scroll">
+    <!-- Cards will be loaded here -->
+  </div>
+  <section id="hotel-list" class="scroll-container"></section>
+  
+  
+ <script src="main.js"></script>
+
+
+ 
+
+ 
+  
+
+  
+
+
+
+ 
+
+
+  <script src="header.js"></script>
+  <script src="translations.js"></script>
+  <script src="book.js"></script>
+  <script src="hotels.js"></script>
+  <script src="auth.js"></script>
+  <script src="hotel-details.js"></script>
+  <script src="main.js"></script>
+  <script src="data/hotels.json"></script>
+  <script src="search.js"></script>
+  <script src="profile.js"></script>
+  <!--<script src="header.js"></script>-->
+  <script src="hotels.js"></script>
+  <script src="saved.js"></script>
+  
+  <!-- index.html yoki boshqa sahifaga bog'langan JavaScript fayli -->
+<script src="js/storage.js"></script>
+
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">How to Book</a></li>
+        <li><a href="#">Safety Resource Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>About Hotels.uz</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Center</a></li>
+        <li><a href="#">Investor Relations</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Countries</a></li>
+        <li><a href="#">Cities</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Travel Ideas</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Hotels.uz. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

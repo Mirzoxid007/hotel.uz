@@ -1,0 +1,210 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Hotels - Hotels.uz</title>
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Hotels.uz</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="auth.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <h2>Search Hotels</h2>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Enter destination, hotel name..." required>
+        <button type="submit" id="searchBtn">Search</button>
+      </form>
+
+      <div class="filters">
+        <h3>Filters</h3>
+        <label for="priceRange">Price Range:</label>
+        <input type="range" id="priceRange" min="0" max="1000" step="10">
+        <p id="priceLabel">0 - 1000</p>
+        <label for="rating">Rating:</label>
+        <select id="rating">
+          <option value="any">Any</option>
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+        <button id="applyFilters">Apply Filters</button>
+      </div>
+    </section>
+
+    <section class="hotel-results">
+      <h3>Hotel Results</h3>
+      <div id="hotelList" class="hotel-cards">
+        <!-- JavaScript orqali mehmonxonalar ro'yxati bu yerga qo'shiladi 
+      </div>
+    </section>
+  </main>
+
+
+
+
+  
+<script src="search.js"></script>
+  
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">How to Book</a></li>
+        <li><a href="#">Safety Resource Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>About Hotels.uz</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Center</a></li>
+        <li><a href="#">Investor Relations</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Countries</a></li>
+        <li><a href="#">Cities</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Travel Ideas</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Hotels.uz. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+          <h1>Hotels.uz</h1>
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="auth.html">Register</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    <section class="filters">
+        <h3>Filters</h3>
+        <label for="priceRange">Price Range:</label>
+        <input type="range" id="priceRange" min="0" max="1000" step="10" value="1000">
+        <p id="priceLabel">0 - 1000</p>
+
+        <label for="rating">Rating:</label>
+        <select id="rating">
+            <option value="any">Any</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+        </select>
+
+        <button id="applyFilters">Apply Filters</button>
+    </section>
+
+    <section class="hotel-results">
+        <h3>Hotel Results</h3>
+        <div id="hotelList" class="hotel-cards">
+            <!-- JavaScript orqali mehmonxonalar ro'yxati bu yerga qo'shiladi -->
+        </div>
+    </section>
+
+    <script src="js/search.js"></script>
+
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">How to Book</a></li>
+            <li><a href="#">Safety Resource Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About Hotels.uz</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Center</a></li>
+            <li><a href="#">Investor Relations</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Countries</a></li>
+            <li><a href="#">Cities</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Travel Ideas</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hotels.uz. All rights reserved.</p>
+      </div>
+    </footer>
+    
+</body>
+</html>

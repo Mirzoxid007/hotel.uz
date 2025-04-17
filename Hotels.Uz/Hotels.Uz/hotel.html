@@ -1,0 +1,45 @@
+<!-- hotel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Details</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="hotel-detail-container">
+    <img id="hotel-image" src="" alt="Hotel Image">
+    <h2 id="hotel-name"></h2>
+    <p id="hotel-location"></p>
+    <p id="hotel-price"></p>
+    <p id="hotel-stars"></p>
+    <p id="hotel-description"></p>
+    
+    <div class="calendar-section">
+      <label>Select Date:</label>
+      <input type="date" id="booking-date">
+    </div>
+
+    <button id="save-btn">❤️ Save</button>
+    <button id="book-now-btn">Book Now</button>
+
+    <h3>Reviews</h3>
+    <ul id="reviews-list"></ul>
+
+    <h4>Add Review</h4>
+    <textarea id="review-text" placeholder="Write your review..."></textarea>
+    <button id="submit-review">Submit Review</button>
+  </div>
+
+ 
+
+
+
+  <!-- Hotel sahifasidagi Save tugmasi -->
+<button id="save-btn">❤️ Save</button>
+
+
+  <script src="Hotels.js"></script>
+  <script src="hotels.json"></script>
+</body>
+</html>

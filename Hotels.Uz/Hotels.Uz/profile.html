@@ -1,0 +1,124 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<!-- HEADER dynamically load 
+<div id="header-container"></div>
+
+<main>
+    <h1>User Profile and Registration</h1>
+
+    <div class="profile-section">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" required>
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <div class="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="user-info" id="user-info" style="display: none;">
+        <h2>👤 Your Profile</h2>
+        <p><strong>Username:</strong> <span id="profile-username"></span></p>
+        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+    </div>
+</main>
+
+<script>
+    // Header yuklash
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+</script>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <header class="main-header">
+    <div class="header__container">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Hotels.uz Logo">
+        </a>
+      </div>
+      <div class="header__actions">
+        <a href="profile.html" id="user-profile">Profile</a>
+        <button id="sign-out-btn" class="sign-out-btn">Sign Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-content">
+    <h1>Welcome, <span id="profile-name"></span>!</h1>
+    <div class="profile-avatar">
+      <img id="profile-pic" src="images/default-avatar.png" alt="Profile Picture">
+      <input type="file" id="upload-pic" accept="image/*">
+    </div>
+    
+    <div class="profile-info">
+      <p><strong>Email:</strong> <span id="profile-email"></span></p>
+      
+      <!-- Password with show/hide -->
+      <p>
+        <strong>Password:</strong> 
+        <span id="profile-password"></span>
+        <button id="toggle-password">Show</button>
+      </p>
+      
+      <!-- Personal description -->
+      <p><strong>Personal Description:</strong></p>
+      <textarea id="profile-description" placeholder="Add your description here"></textarea>
+    </div>
+  
+    <button id="edit-profile-btn">Edit Profile</button>
+  
+    <form id="edit-form" style="display:none;">
+      <input type="text" id="edit-name" placeholder="New username" />
+      <input type="email" id="edit-email" placeholder="New email" />
+      <input type="password" id="edit-password" placeholder="New password" />
+      <textarea id="edit-description" placeholder="New description"></textarea>
+      <button type="submit">Save Changes</button>
+    </form>
+  </main>
+  
+  
+
+  <script src="profile.js"></script>
+
+
+  <!--<script src="auth.js"></script>-->
+</body>
+</html>

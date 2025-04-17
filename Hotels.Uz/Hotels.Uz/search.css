@@ -1,0 +1,108 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Filters section */
+.filters {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.filters h3 {
+  margin-top: 0;
+}
+
+label {
+  margin: 10px 0;
+  display: block;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+#priceLabel {
+  margin: 10px 0;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Hotel results section */
+.hotel-results {
+  padding: 20px;
+}
+
+.hotel-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hotel-card {
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hotel-info {
+  padding: 15px;
+}
+
+.hotel-info h4 {
+  margin: 0 0 10px;
+}
+
+.hotel-info p {
+  margin: 5px 0;
+}
+
+.view-details {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.view-details:hover {
+  text-decoration: underline;
+}
+
+

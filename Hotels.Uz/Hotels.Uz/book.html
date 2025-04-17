@@ -1,0 +1,135 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+  <div class="hotel-details">
+    <!-- Hotel Image and Details 
+    <div class="hotel-info">
+      <img id="hotelImage" src="" alt="Hotel Image" class="hotel-img" />
+      <div class="details">
+        <h2 id="hotelName">Hotel Name</h2>
+        <p id="hotelLocation">Location: </p>
+        <p id="hotelPrice">Price: $</p>
+        <button class="save-btn" onclick="saveHotel()">❤️ Save</button>
+        <button class="book-btn" onclick="showModal()">Book Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>Booking Confirmation</h3>
+      <p>Are you sure you want to book <span id="modalHotelName"></span> for <span id="modalHotelPrice"></span>?</p>
+      <button onclick="confirmBooking()">Yes, Book Now</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    // Get hotel ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const hotelId = urlParams.get('id');
+    const hotels = [
+      { id: 1, name: "City Hotel", location: "Tashkent", price: 99, image: "images/city-hotel.jpg" },
+      { id: 2, name: "Mountain View", location: "Samarkand", price: 130, image: "images/hotel2.jpg" },
+      { id: 3, name: "Silk Road Inn", location: "Bukhara", price: 120, image: "images/hotel3.jpg" },
+      { id: 4, name: "Luxury Stay", location: "Khiva", price: 150, image: "images/hotel4.jpg" },
+      { id: 5, name: "Lake Side", location: "Shahrisabz", price: 110, image: "images/hotel5.jpg" },
+      { id: 6, name: "Desert Palace", location: "Navoi", price: 105, image: "images/hotel6.jpg" },
+      { id: 7, name: "City Lights", location: "Andijan", price: 98, image: "images/hotel7.jpg" },
+      { id: 8, name: "Sky Tower Hotel", location: "Namangan", price: 140, image: "images/hotel8.jpg" }
+    ];
+
+    // Find the hotel from the list by id
+    const hotel = hotels.find(h => h.id === parseInt(hotelId));
+
+    // Render hotel details on the page
+    document.getElementById('hotelImage').src = hotel.image;
+    document.getElementById('hotelName').textContent = hotel.name;
+    document.getElementById('hotelLocation').textContent = `Location: ${hotel.location}`;
+    document.getElementById('hotelPrice').textContent = `Price: $${hotel.price}`;
+
+    // Save hotel to localStorage
+    function saveHotel() {
+      let saved = JSON.parse(localStorage.getItem('savedHotels')) || [];
+      if (!saved.find(h => h.id === hotel.id)) {
+        saved.push(hotel);
+        localStorage.setItem('savedHotels', JSON.stringify(saved));
+        alert("Hotel saved!");
+      } else {
+        alert("Already saved!");
+      }
+    }
+
+    // Modal functions
+    function showModal() {
+      document.getElementById('modalHotelName').textContent = hotel.name;
+      document.getElementById('modalHotelPrice').textContent = `$${hotel.price}`;
+      document.getElementById('bookingModal').style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').style.display = "none";
+    }
+
+    function confirmBooking() {
+      alert("Booking successful!");
+      closeModal();
+    }
+  </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Hotel</title>
+  <link rel="stylesheet" href="book.css">
+  <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+  <div class="container" id="hotelContainer"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>✅ Booking successful!</h3>
+      <p>Thank you for booking with us.</p>
+    </div>
+  </div>
+
+
+  
+
+  <div class="hotel-details">
+    <img id="hotelImage" class="hotel-image" src="" alt="Hotel" />
+    <h2 id="hotelName"></h2>
+    <p id="hotelLocation"></p>
+    <p id="hotelPrice"></p>
+    <p id="hotelDescription"></p>
+
+    <button id="saveBtn" class="save-btn">❤️ Save</button>
+    <button id="bookBtn" class="book-btn">Book Now</button>
+  </div>
+
+  <!-- Modal oynasi -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <p>✅ Booking successful!</p>
+    </div>
+  </div>
+
+  
+  <script src="book.js"></script>
+  
+</body>
+</html>

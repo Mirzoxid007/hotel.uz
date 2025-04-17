@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+  <div class="admin-content">
+    <section id="add-hotel">
+      <h2>Add Hotel</h2>
+      <form id="add-hotel-form">
+        <input type="text" id="hotel-name" placeholder="Hotel Name" required>
+        <input type="text" id="hotel-location" placeholder="Location" required>
+        <input type="number" id="hotel-price" placeholder="Price" required>
+        <input type="url" id="hotel-image" placeholder="Image URL" required>
+        <button type="submit">Add Hotel</button>
+      </form>
+    </section>
+
+    <section id="hotel-list">
+      <h2>Hotel List</h2>
+      <div id="hotels-list-container"></div>
+    </section>
+
+    <section id="user-list">
+      <h2>User List</h2>
+      <div id="users-list-container"></div>
+    </section>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

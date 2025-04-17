@@ -1,0 +1,313 @@
+
+
+  
+
+ Header styling 
+.main-header {
+    background-color: #003580;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Logo styling */
+  .header__logo img {
+    width: 150px;
+    transition: transform 0.3s ease;
+  }
+  
+  .header__logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Actions section (Profile + Sign Out) */
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Profile link */
+  #user-profile {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  #user-profile:hover {
+    color: #ffd700; /* Hover uchun rang */
+  }
+  
+  /* Sign out button */
+  .sign-out-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sign-out-btn:hover {
+    background-color: #ff2d2d; /* Hover uchun yanada qizil rang */
+    transform: scale(1.05);
+  }
+  
+  .sign-out-btn:focus {
+    outline: none;
+  }
+  
+  /* Menu alignment (left side) */
+  .header__actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .header__actions a, .header__actions button {
+    margin-left: 20px; /* Chapga qo'shishni sozlash */
+  }
+  
+  /* Profile section - interactivity on hover */
+  .profile-avatar img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #003580;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-avatar img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 53, 128, 0.5);
+  }
+  
+  /* Profile form */
+  #upload-pic {
+    background-color: #003580;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  #upload-pic:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+  }
+  
+  /* Profile content box */
+  .profile-content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .header__logo img {
+      width: 130px;
+    }
+  
+    .header__actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .header__actions a,
+    .header__actions button {
+      margin-left: 0;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+  
+.profile-avatar {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-avatar img {
+    width: 180px; /* Kattaroq rasm */
+    height: 180px;
+    border-radius: 50%; /* Yassilangan ko'rinish */
+    object-fit: cover;
+    border: 5px solid #003580; /* Sinfli chegara */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Rasmni hover qilsangiz kattalashadi */
+  .profile-avatar img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 53, 128, 0.5);
+  }
+  
+  /* Upload tugmasi */
+  #upload-pic {
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #003580;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+  }
+  
+  #upload-pic:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+  }
+  
+  #upload-pic:focus {
+    outline: none;
+  }
+  
+  /* Tugma hover effekti */
+  #edit-profile-btn {
+    background-color: #003580;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    border: none;
+  }
+  
+  /* Hover qilsangiz tugma kengayadi */
+  #edit-profile-btn:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+  }
+  
+  /* Form elementlari */
+  #edit-form {
+    margin-top: 30px;
+  }
+  
+  #edit-form input, #edit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  #edit-form button {
+    padding: 12px 20px;
+    background-color: #003580;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
+  
+  #edit-form button:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+  }
+  
+  /* Textarea styling */
+  textarea {
+    height: 100px;
+    resize: vertical; /* faqat vertikal o'lchamni o'zgartirish */
+  }
+  
+  /* Password Show/Hide Button */
+  #toggle-password {
+    background-color: transparent;
+    border: none;
+    color: #003580;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  #toggle-password:hover {
+    color: #ff4d4d;
+  }
+  
+  /* Profile info */
+  .profile-info p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .profile-info strong {
+    font-weight: bold;
+    color: #003580;
+  }
+  
+  /* Main container */
+  .profile-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Profile Header */
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #003580;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-avatar img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    #edit-profile-btn {
+      width: auto;
+    }
+  
+    #edit-form input,
+    #edit-form textarea {
+      font-size: 14px;
+    }
+  }
+  

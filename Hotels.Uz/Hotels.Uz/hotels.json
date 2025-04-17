@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "Hotel One",
+      "location": "Tashkent",
+      "price": 120,
+      "image": "Hotels.Uz/images/0d6023360d92d82a3f435ca4d4031310a591e2f7.jpg",
+      "stars": 4,
+      "description": "Luxurious hotel in the heart of Tashkent.",
+      "reviews": ["Great service!", "Comfortable stay."]
+    },
+    {
+      "id": 2,
+      "name": "Hotel Two",
+      "location": "Samarkand",
+      "price": 120,
+      "image": "Hotels.Uz/images/0d6023360d92d82a3f435ca4d4031310a591e2f7.jpg",
+      "stars": 3,
+      "description": "Historic ambiance near Registan.",
+      "reviews": ["Beautiful architecture.", "Friendly staff."]
+    }
+  ]
+  
